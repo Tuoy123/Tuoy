@@ -1,71 +1,63 @@
-import React from 'react'
-import "@/scss/friend/FriendIndex.scss"
-import Tab from "@/components/Tab"
-import { Tabs } from 'react-vant'
-import { Outlet } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import "@/scss/friend/FriendIndex.scss";
+import Tab from "@/components/Tab";
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
-const items = [1, 2]
 const index = () => {
-    const navigate = useNavigate()
-  return (
-    <div className='friend'>
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [selectedClassifyIndex, setSelectedClassifyIndex] = useState(null);
 
-      <div className="top container">
+    const items = ['关注', '推荐'];
+    const itemRoutes = ['/friend/concern', '/friend/recommend'];
 
-        <div className="search">
+    const handleClassifyClick = (index) => {
+        setSelectedClassifyIndex(index);
+        navigate(itemRoutes[index], { replace: true });
+    };
 
-          <div className="icon">
-            <img src="/public/images/Friend-index/搜索.png" alt="搜索" />
-          </div>
-
-          <input type="text" placeholder='搜索你想要的'/>
-        </div>
-
-        <div className="camera">
-          <img src="/public/images/Friend-index/上传.png" alt="拍照上传" />
-        </div>
-
-      </div>
-
-      <div className="classify">
-
-      <Tabs 
-      defaultActive={2}
-      align='start'
-      titleInactiveFontSize={20}
-      titleInactiveColor='#999'
-      titleActiveFontSize={21}
-      titleActiveColor='#08090A'
-      color='#FCCB30'
-      onClickTab={(index)=>{
-
-        console.log(index)
-        if(index==1){
-          navigate('/friend/concern')
+    useEffect(() => {
+        const currentPath = location.pathname;
+        const index = itemRoutes.findIndex(route => route === currentPath);
+        if (index!== -1) {
+            setSelectedClassifyIndex(index);
+        } else {
+            // 如果没有匹配到当前路径，默认选中关注
+            setSelectedClassifyIndex(0);
+            navigate(itemRoutes[0], { replace: true });
         }
-        if(index==2){
-          navigate('/friend/recommend')
-        }
-      }}
-      >
-        {items.map(item => (
-          <Tabs.TabPane key={item} title={item === 1?'关注':'推荐'}>
+    }, [location]);
+
+    return (
+        <div className='friend'>
+            <div className="top container">
+                <div className="search">
+                    <div className="icon">
+                        <img src="/public/images/Friend-index/搜索.png" alt="搜索" />
+                    </div>
+                    <input type="text" placeholder='搜索你想要的' />
+                </div>
+                <div className="camera">
+                    <img src="/public/images/Friend-index/上传.png" alt="拍照上传" />
+                </div>
+            </div>
+            <div className="classify-list">
+                {items.map((item, index) => (
+                    <div
+                        className={`item ${index === selectedClassifyIndex? 'selected' : ''}`}
+                        key={index}
+                        onClick={() => handleClassifyClick(index)}
+                    >
+                        <div className="txt">{item}</div>
+                        {index === selectedClassifyIndex && <div className="yLine"></div>}
+                    </div>
+                ))}
+            </div>
             <Outlet />
-          </Tabs.TabPane>
-        ))}
-      </Tabs>
+            {/* 底部 Tabbar 栏 */}
+            <Tab />
+        </div>
+    );
+};
 
-      </div>
-
-
-
-
-
-      {/* 底部 Tabbar 栏 */}
-      <Tab />
-    </div>
-  )
-}
-
-export default index
+export default index;

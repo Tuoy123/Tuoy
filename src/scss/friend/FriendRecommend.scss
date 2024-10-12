@@ -1,0 +1,26 @@
+ul {
+    list-style-type: none;
+}
+
+.FriendRecommend {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .RecommendList {
+        width: 100%;
+        height: 205px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1px solid #ECECEC;
+        padding-left: 15px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
