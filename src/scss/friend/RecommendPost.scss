@@ -1,0 +1,242 @@
+.RecommendPost {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 352px;
+    border-radius: 10px;
+    border-bottom: 1px solid #ECECEC;
+    border-top: 1px solid #ECECEC;
+    padding-top: 25px;
+
+    .r-header {
+        width: calc(100% - 30px);
+        margin: auto;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .r-header-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transform: none;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+        }
+
+        .r-header-userInfo {
+            width: calc(100% - 52px);
+            display: flex;
+            align-items: center;
+
+            .r-userInfo-l {
+                width: 60%;
+                height: 100%;
+
+                .r-name {
+                    height: 20px;
+                    font-family: PingFang SC, PingFang SC;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #08090A;
+                    line-height: 20px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                    margin-bottom: 3px;
+                }
+
+                .r-type {
+                    height: 16px;
+                    font-family: PingFang SC, PingFang SC;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #999999;
+                    line-height: 16px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                }
+            }
+
+            .r-header-userInfo-r {
+                margin-left: auto;
+                width: 40%;
+                height: 100%;
+                font-family: PingFang SC, PingFang SC;
+                font-weight: 400;
+                font-size: 12px;
+                color: #999999;
+                line-height: 40px;
+                text-align: right;
+                font-style: normal;
+                text-transform: none;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                
+                .r-concernBtn {
+                    width: 60px;
+                    height: 26px;
+                    border-radius: 14px 14px 14px 14px;
+                    border: 1px solid #FCCB30;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 3px;
+            
+                    span {
+                        height: 16px;
+                        font-family: PingFang SC, PingFang SC;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: #FCCB30;
+                        line-height: 16px;
+                        text-align: left;
+                        font-style: normal;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .r-post--content {
+        width: 100%;
+        margin: auto;
+
+        .r-picList {
+            width: 100%;
+            margin-top: 16px;
+            margin-left: 15px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &::-webkit-scrollbar {
+                display: none;
+
+            }
+
+        }
+
+        .r-text {
+            width: 345px;
+            height: 43px;
+            margin: auto;
+            padding: 3px 5px 0 5px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 14px;
+            color: #3A3B3C;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+            margin-bottom: 12px;
+
+        }
+
+        .r-footer {
+            margin-bottom: 27px;
+            margin: auto;
+            width: calc(100% - 30px);
+            height: 28px;
+            display: flex;
+            align-items: center;
+
+            .r-footer-l {
+                width: 117px;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .r-footer-l-avatar {
+                    width: 52px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+
+                }
+
+                .r-footer-l-txt {
+                    width: 60px;
+                    height: 16px;
+                    font-family: PingFang SC, PingFang SC;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #999999;
+                    line-height: 28px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .r-footer-r {
+                width: 100%;
+                height: 28px;
+                justify-content: flex-end;
+                display: flex;
+                align-items: center;
+                gap: 23px;
+
+                .r-icon {
+                    width: 16px;
+                    height: 16px;
+                    color: #999;
+                }
+
+                .r-footer-txt {
+                    height: 28px;
+                    font-family: Helvetica, Helvetica;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #999999;
+                    line-height: 28px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                }
+
+                .r-support {
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .r-like {
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .r-comments {
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+            }
+        }
+    }
+}
