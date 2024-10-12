@@ -1,0 +1,44 @@
+.demo-swiper {
+width: 100%;
+
+    .rv-swiper {
+
+      &__slide {
+
+        .rv-swiper-item {
+          color: #fff;
+          font-size: 20px;
+          height: 165px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+        }
+  
+        &:nth-child(odd) {
+          .rv-swiper-item {
+            // background-color: #3f45ff;
+          }
+        }
+  
+        &:nth-child(even) {
+          .rv-swiper-item {
+            // background-color: lighten(#3f45ff, 8%);
+          }
+        }
+      }
+  
+      img {
+        display: block;
+        box-sizing: border-box;
+        width: 345px;
+        height: 165px;
+        background-color: #fff;
+        pointer-events: none;
+
+      }
+
+    }
+  }
+  

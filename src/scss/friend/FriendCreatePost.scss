@@ -1,0 +1,142 @@
+input {
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+.FriendCreatePost {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    .FriendCreatePost-top {
+        width: 100%;
+        height: 44px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .FriendCreatePost-top-left {
+            width: 24px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+
+            span {
+                width: 24px;
+                height: 24px;
+
+            }
+        }
+
+        .FriendCreatePost-top-center {
+            width: calc(100% - 78px);
+            height: 44px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+            line-height: 44px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+
+        }
+    }
+
+    .FriendCreatePost-content {
+        width: 100%;
+
+        .FriendCreatePost-content-postTxt {
+            margin-left: 18px;
+            width: 339px;
+            min-height: 91px;
+            margin-bottom: 20px;
+            line-height: 21px;
+            border: none;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 16px;
+            color: #999999;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+
+        }
+
+        .FriendCreatePost-content-postImg {
+            width: 100%;
+            padding-left: 18px;
+            display: flex;
+            height: 110px;
+            align-items: center;
+            margin-bottom: 33px;
+            overflow: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .postImgAdd {
+                width: 110px;
+                height: 110px;
+                background: #F7F7F7;
+                border-radius: 10px 10px 10px 10px;
+                cursor: pointer;
+
+                .postImgAdd-a {
+                    width: 110px;
+                    height: 110px;
+                    display: flex;
+                align-items: center;
+                justify-content: center;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        object-fit: cover;
+
+                    }
+                }
+
+            }
+
+            .addPic {
+                width: 110px;
+                height: 110px;
+                background: #F7F7F7;
+                border-radius: 10px 10px 10px 10px;
+
+                img {
+                    width: 110px;
+                    height: 110px;
+                    object-fit: cover;
+                    border-radius: 10px 10px 10px 10px;
+
+                }
+            }
+        }
+
+        .FriendCreatePost-createPostBtn {
+            width: 100%;
+            height: 50px;
+            background: #FCCB30;
+            border: none;
+            border-radius: 25px 25px 25px 25px;
+            position: absolute;
+            bottom: 36px;
+            left: 0;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 16px;
+            color: #08090A;
+            line-height: 50px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+
+        }
+    }
+}

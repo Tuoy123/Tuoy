@@ -3,6 +3,7 @@ import { Tabbar } from 'react-vant'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const Tab = () => {
+
     const navigate = useNavigate()
     //获取路由信息
     const location = useLocation()
@@ -45,35 +46,36 @@ const Tab = () => {
                 break
         }
     }
-        return (
-            <div className='demo-tabbar'>
-                <Tabbar
-                    fixed={true}
-                    border={false}
-                    onChange={handleChange}
-                    activeColor='#080808'
-                    inactiveColor='#858585'
-                    defaultValue={defaultValue} 
-                    safeAreaInsetBottom={true}
-                >
+    return (
+        <div className='demo-tabbar' >
 
-                    {tabbarIcons.map((item, index) => {
-                        return (
-                            <Tabbar.Item
-                                key={index}
-                                name={item.path}
-                                icon={(active) => (
-                                    <img src={active ? item.iconActive : item.icon} />
-                                )}
-                            >
-                                {item.text}
-                            </Tabbar.Item>
-                        )
-                    })}
+            <Tabbar
+                fixed={true}
+                border={false}
+                onChange={handleChange}
+                activeColor='#080808'
+                inactiveColor='#858585'
+                defaultValue={defaultValue}
+                safeAreaInsetBottom={true}
+            >
 
-                </Tabbar>
-            </div>
-        )
-    }
+                {tabbarIcons.map((item, index) => {
+                    return (
+                        <Tabbar.Item
+                            key={index}
+                            name={item.path}
+                            icon={(active) => (
+                                <img src={active ? item.iconActive : item.icon} />
+                            )}
+                        >
+                            {item.text}
+                        </Tabbar.Item>
+                    )
+                })}
 
-    export default Tab
+            </Tabbar>
+        </div>
+    )
+}
+
+export default Tab
