@@ -2,6 +2,7 @@
     padding: 0 15px;
 }
 
+
 .friend {
     margin: 0;
     padding: 0;
@@ -70,11 +71,40 @@
         }
     }
 
-.classify{
-    margin-top: 5px;
-    margin-left: 15px;
+    .classify-list {
 
-}
+        margin-top: 5px;
+        margin-left: 15px;
+        width: calc(100% - 30px);
+        height: 70px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        .item {
+            width: 42px;
+            height: 100%;
+            
+            .txt {
+                width: 100%;
+                margin-top: 13px;
+                height: 28px;
+                font-family: PingFang SC, PingFang SC;
+                font-weight: 500;
+                font-size: 21px;
+                color: #08090A;
+                line-height: 28px;
+                text-align: left;
+            }
+
+            .yLine {
+                width: 42px;
+                margin-top: 8px;
+                height: 3px;
+                background: #FCCB30;
+            }
+        }
+    }
 
 
 

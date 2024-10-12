@@ -1,0 +1,14 @@
+li {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid #fccd3a;
+    transform: none;
+
+    img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

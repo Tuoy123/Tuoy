@@ -1,0 +1,120 @@
+.ImgBox {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+
+    .state1 {
+        width: 345px;
+        height: 200px;
+        border-radius: 12px 12px 12px 12px;
+
+        img {
+            width: 345px;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    }
+
+    .state2 {
+        width: 100%;
+        height: 112px;
+        border-radius: 12px 12px 12px 12px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+            width: 112px;
+            height: 112px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    }
+
+    .state3 {
+        width: 312px;
+        height: 112px;
+        border-radius: 12px;
+        gap: 12px;
+        float: left;
+
+
+
+        img {
+            width: 112px;
+            height: 112px;
+            border-radius: 12px;
+            object-fit: cover;
+
+            &:nth-child(1) {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: 5px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .state4 {
+        width: 346px;
+        height: 112px;
+        border-radius: 12px;
+        float: left;
+        margin-bottom: 5px;
+
+        &:only-child(7) {
+            margin-bottom: 0;
+        }
+
+        &:only-child(8) {
+            margin-bottom: 0;
+        }
+
+        &:only-child(9) {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 112px;
+            height: 112px;
+            border-radius: 12px;
+            object-fit: cover;
+
+            &:nth-child(1) {
+                margin-right: 5px;
+            }
+
+            &:nth-child(4) {
+                margin-right: 5px;
+            }
+
+            &:nth-child(7) {
+                margin-right: 5px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 5px;
+            }
+
+            &:nth-child(5) {
+                margin-right: 5px;
+            }
+
+            &:nth-child(8) {
+                margin-right: 5px;
+            }
+
+
+        }
+    }
+
+}

@@ -13,6 +13,8 @@ import MyAppraise from "@/views/Mine/myAppraise";
 import MyCollection from "@/views/Mine/myCollection";
 import FriendConcern from "@/views/Friend/FriendConcern";
 import FriendRecommend from "@/views/Friend/FriendRecommend";
+import FriendDetail from "@/views/Friend/FriendDetail";
+import FriendCreatePost from "@/views/Friend/FriendCreatePost";
 
 // 路由规则
 const router = createBrowserRouter([
@@ -36,7 +38,16 @@ const router = createBrowserRouter([
                         path: "/friend/recommend",
                         element: <FriendRecommend />,
                     },
+                    
                 ]
+            },
+            {
+                path: "/frienddetail/:id",
+                element: <FriendDetail />,
+            },
+            {
+                path: "/friend/createpost",
+                element: <FriendCreatePost />
             },
             {
                 path: "/mine",
