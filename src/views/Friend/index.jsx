@@ -172,7 +172,7 @@ const index = () => {
                     >
 
                         <div className="txt">{item}</div>
-                        {index === selectedClassifyIndex && <div className="yLine"></div>}
+                        {index === selectedClassifyIndex && <div className="y-Line"></div>}
 
                     </div>
                 ))}

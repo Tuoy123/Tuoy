@@ -1,0 +1,118 @@
+.AddPet {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    .AddPet-top {
+        width: 100%;
+        height: 44px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+
+        .AddPet-top-left {
+            width: 24px;
+            height: 44px;
+            color: #999;
+            line-height: 44px;
+            text-align: left;
+
+        }
+
+        .AddPet-top-center {
+            width: calc(100% - 86px);
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+            line-height: 44px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .AddPet-top-right {
+            width: 32px;
+            height: 44px;
+            color: #FCCB30;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 16px;
+            color: #FCCB30;
+            line-height: 44px;
+            text-align: right;
+            font-style: normal;
+            text-transform: none;
+
+
+        }
+
+
+    }
+
+    .AddPet-content {
+        width: 100%;
+        height: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 53px;
+
+        .AddPet-content-item {
+            width: calc(100% - 30px);
+            height: 68px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ECECEC;
+
+            .AddPet-content-item-l {
+                width: 40%;
+                height: 68px;
+                font-family: PingFang SC, PingFang SC;
+                font-weight: 400;
+                font-size: 15px;
+                color: #08090A;
+                line-height: 68px;
+                text-align: left;
+                font-style: normal;
+                text-transform: none;
+
+            }
+
+            .AddPet-content-item-r {
+                width: 60%;
+                height: 68px;
+                font-family: PingFang SC, PingFang SC;
+                font-weight: 400;
+                font-size: 16px;
+                color: #999999;
+                line-height: 68px;
+                text-align: right;
+                font-style: normal;
+                text-transform: none;
+
+                img {
+                    margin-top: 9px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: none;
+
+                }
+
+                input {
+                    border: none;
+                    text-align: right;
+                    ;
+
+                }
+
+            }
+        }
+
+    }
+
+
+}

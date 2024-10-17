@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "@/scss/friend/ConcernList.scss"
 import { useNavigate } from 'react-router-dom'
+import { Toast } from 'react-vant';
 
 const ConcernList = (props) => {
 
@@ -35,7 +36,7 @@ const ConcernList = (props) => {
         <>
             {
                 List.map((item, index) => (
-                    <li key={index} onClick={() => toDetail(item.pId, item)}>
+                    <li className='li' key={index} onClick={() => toDetail(item.pId, item)}>
                         <img src={item.avatar} />
                     </li>
                 ))

@@ -5,6 +5,8 @@ import { ArrowDown, Arrow } from '@react-vant/icons';
 import HomeSwiper from '@/components/home/HomeSwiper';
 import Menu from '@/components/home/Menu';
 import RecommendPost from '@/components/friend/RecommendPost';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 //模拟接收到的数据
 const recommendApi = [
@@ -125,6 +127,26 @@ const workerList = [
 
 const index = () => {
 
+  const navigate = useNavigate()
+
+  const getWorkerList = async () => {
+    // 获取热门护理师数据
+    const res = await axios.get('http://8.154.37.184:8080/home-page/hot-carer')
+
+    console.log("getWorkerList", res.data)
+
+  }
+
+  const getBanners = async () => {
+    // 获取轮播图数据
+    const res = await axios.get('http://8.154.37.184:8080/home-page/home-slideshow')
+
+    console.log("getBanners", res.data)
+
+  }
+
+
+
   return (
     <div className="Home">
 
@@ -158,7 +180,7 @@ const index = () => {
             每日推荐
           </div>
 
-          <div className="h-r-top-more">
+          <div className="h-r-top-more" onClick={() => navigate('/friend/recommend')}>
 
             <span>查看全部</span>
             <span><Arrow /></span>

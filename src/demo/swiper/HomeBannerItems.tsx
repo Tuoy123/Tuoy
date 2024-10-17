@@ -1,8 +1,7 @@
 import React from 'react'
 import { Swiper, Toast } from 'react-vant'
 
-const colors = ['#ace0ff', '#bcffbd', '#e4fabd', '#ffcfac']
-
+// 模拟首页banner数据
 const banners = [
     '/public/images/Home-index/swiper-List/banner.png',
     '/public/images/Home-index/swiper-List/banner.png',
@@ -13,7 +12,7 @@ const banners = [
     '/public/images/Home-index/swiper-List/banner.png',
 ]
 
-export const items =
+export const HomeBannerItems =
     banners.map((item, index) => (
 
 

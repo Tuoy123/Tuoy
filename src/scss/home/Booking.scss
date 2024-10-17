@@ -1,0 +1,321 @@
+.Booking {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+
+    .Booking-top {
+        width: 100%;
+        height: 44px;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .Booking-top-left {
+            width: 24px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .Booking-top-left-ic {
+                width: 24px;
+                height: 24px;
+                color: #999;
+
+            }
+        }
+
+        .Booking-top-title {
+            width: calc(100% - 54px);
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+            line-height: 44px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+
+        }
+    }
+
+    .Booking-title {
+        height: 20px;
+        font-family: PingFang SC, PingFang SC;
+        font-weight: 500;
+        font-size: 15px;
+        color: #08090A;
+        line-height: 20px;
+        text-align: left;
+        font-style: normal;
+        text-transform: none;
+        margin-top: 25px;
+        margin-bottom: 16px;
+        padding-left: 15px;
+
+    }
+
+    .Booking-addPet {
+        width: 100%;
+        padding-left: 15px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .Booking-addPet-add-btn {
+            width: 60px;
+            height: 60px;
+            background: #FCCB30;
+            border-radius: 10px 10px 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 19px;
+                height: 19px;
+
+            }
+
+            &:active {
+                background: #FCCB30;
+                opacity: 0.8;
+                border-radius: 10px 10px 10px 10px;
+
+            }
+        }
+
+        .Booking-addPet-add-pet {
+            width: 100%;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .Booking-addPet-add-pet-item {
+                width: 150px;
+                height: 60px;
+                background: #FEFFFE;
+                border-radius: 8px 8px 8px 8px;
+                border: 1px solid #E3E3E3;
+                padding-left: 12px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .Booking-addPet-add-pet-item-avatar {
+                    margin-top: 10px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: #999;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+
+                    }
+
+                }
+
+                .Booking-addPet-add-pet-item-info {
+                    flex: 1;
+                    height: 40px;
+                    padding-top: 10px;
+
+                    .pet-master {
+                        height: 20px;
+                        font-family: PingFang SC, PingFang SC;
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: #08090A;
+                        line-height: 20px;
+                        text-align: left;
+                        font-style: normal;
+                        text-transform: none;
+
+                    }
+
+                    .pet-type {
+                        height: 16px;
+                        font-family: PingFang SC, PingFang SC;
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: #999999;
+                        line-height: 16px;
+                        text-align: left;
+                        font-style: normal;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .Booking-chooseTime-title {
+        width: calc(100% - 30px);
+        margin: auto;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+
+        .l {
+            width: 105px;
+            height: 20px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 15px;
+            color: #08090A;
+            line-height: 20px;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .r {
+            margin-left: auto;
+            height: 16px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 12px;
+            color: #FCCB30;
+            line-height: 20px;
+            text-align: right;
+            font-style: normal;
+            text-transform: none;
+        }
+
+    }
+
+    .Booking-chooseTime {
+        width: calc(100% - 30px);
+        height: 75px;
+        background: #FEFFFE;
+        border-radius: 10px 10px 10px 10px;
+        border: 1px solid #E3E3E3;
+        margin-left: 15px;
+        margin-top: 16px;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .Booking-chooseTime-item {
+            width: calc(100% - 30px);
+
+            .Booking-chooseTime-item-t {
+                height: 17px;
+                font-family: Helvetica Neue, Helvetica Neue;
+                font-weight: 500;
+                font-size: 16px;
+                color: #08090A;
+                line-height: 17px;
+                text-align: center;
+                font-style: normal;
+                text-transform: none;
+                margin-bottom: 4px;
+
+            }
+
+            .Booking-chooseTime-item-b {
+                height: 15px;
+                font-family: PingFang SC, PingFang SC;
+                font-weight: 400;
+                font-size: 12px;
+                color: #999999;
+                line-height: 15px;
+                text-align: center;
+                font-style: normal;
+                text-transform: none;
+            }
+        }
+
+        .b-c-i-line {
+            width: 1px;
+            height: 37px;
+            background: #ECECEC;
+            border-radius: 0px 0px 0px 0px;
+            margin-top: 19px;
+
+        }
+
+    }
+
+    .d-s-bar {
+        border-top: 1px solid #F0F0F0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: calc(100% - 30px);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        margin-top: 10px;
+        position: s;
+
+        .d-s-bar-btn {
+            width: 100px;
+            height: 36px;
+            background: #FCCB30;
+            border-radius: 18px 18px 18px 18px;
+            margin-left: auto;
+
+            span {
+                font-family: PingFang SC, PingFang SC;
+                font-weight: 500;
+                font-size: 14px;
+                color: #08090A;
+                line-height: 36px;
+                text-align: center;
+                font-style: normal;
+                text-transform: none;
+
+            }
+
+        }
+
+        .symbol {
+            width: 15px;
+            height: 18px;
+            color: red;
+
+        }
+
+        .num {
+            height: 36px;
+            font-family: DIN Alternate, DIN Alternate;
+            font-weight: bold;
+            font-size: 26px;
+            color: #FF4646;
+            line-height: 36px;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, Toast } from 'react-vant';
-import { HomeBannerItems } from '@/demo/swiper/HomeBannerItems';
+import { FosterCareBannerItem } from '@/demo/swiper/FosterCareBannerItem';
 import '@/demo/swiper/base.less';
 
 export default () => {
@@ -18,7 +18,7 @@ export default () => {
 
             >
 
-                {HomeBannerItems}
+                {FosterCareBannerItem}
 
             </Swiper>
         </div>

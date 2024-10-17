@@ -37,13 +37,23 @@ header {
     border-bottom: 1px solid #F0F0F0;
 }
 
-.Phone {
+.Phone,
+.password,
+.email {
+    width: 315px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+/* .Phone,
+.password {
     width: 315px;
     height: 40px;
     margin-bottom: 3px;
     border: none;
     border-bottom: 1px solid #F0F0F0;
-}
+} */
 
 input:focus {
     outline: none;

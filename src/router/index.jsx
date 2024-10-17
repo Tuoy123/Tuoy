@@ -20,6 +20,10 @@ import FosterCare from "@/views/Home/FosterCare";
 import Hairdressing from "@/views/Home/Hairdressing";
 import Knowledge from "@/views/Home/Knowledge";
 import Medical from "@/views/Home/Medical";
+import StoresDetail from "@/views/Home/StoresDetail";
+import Booking from "@/views/Home/Booking";
+import AddPet from "@/views/Home/AddPet";
+import ChoosePetType from "@/views/Home/ChoosePetType";
 
 // 路由规则
 const router = createBrowserRouter([
@@ -35,6 +39,22 @@ const router = createBrowserRouter([
                 path: '/home/fostercare',
                 element: <FosterCare />
 
+            },
+            {
+                path: '/home/storesdetail/:id',
+                element: <StoresDetail />
+            },
+            {
+                path: '/home/booking',
+                element: <Booking />
+            },
+            {
+                path: '/home/addpet',
+                element: <AddPet />
+            },
+            {
+                path: '/home/choosepettype',
+                element: <ChoosePetType />
             },
             {
                 path: '/home/hairdressing',

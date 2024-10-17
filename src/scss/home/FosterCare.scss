@@ -1,0 +1,65 @@
+.FosterCare {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .FosterCare-top {
+        width: 100%;
+        height: 44px;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        gap: 129px;
+        margin-bottom: 10px;
+
+        .FosterCare-top-left {
+            width: 24px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .FosterCare-top-left-ic {
+                width: 24px;
+                height: 24px;
+                color: #999;
+
+            }
+        }
+
+        .FosterCare-top-title {
+            height: 44px;
+            text-align: center;
+            width: 36px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+            line-height: 44px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+
+        }
+    }
+
+    .fosterCare-title {
+        width: 100%;
+        height: 44px;
+        padding-left: 15px;
+        margin-top: 30px;
+        margin-bottom: 3px;
+
+        span {
+            width: 72px;
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 500;
+            font-size: 18px;
+            color: #08090A;
+            line-height: 44px;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import { ArrowLeft, Arrow } from '@react-vant/icons';
 import "@/Login.css"
 import { Form, Input, Button, Toast } from 'react-vant';
 import axios from 'axios';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Login = () => {
     const navigate = useNavigate();
 
@@ -17,25 +17,28 @@ const Login = () => {
         }, 1500);
     }
 
-    const onFinish = (values) => {
-
-        console.log('Success:', values);
-
-        if (values.phone === '' || values.phone === null || values.phone === undefined) {
-            Toast.fail('请输入手机号');
-            return false;
+    const onFinish = async (values) => {
+        try {
+            // 向后端发起请求
+            const response = await axios.post('http://8.154.37.184:8080/user/login', values);
+            if (response.status === 200) {
+                // 注册成功后的处理逻辑，比如提示用户并跳转到登录页面
+                Toast.success('登录成功！');
+                navigate('/mine', { replace: true });
+            } else {
+                // 注册失败的处理逻辑，比如显示错误信息
+                Toast.fail('登录失败，请检查输入信息。');
+            }
+        } catch (error) {
+            // 处理请求错误的逻辑，比如网络问题或服务器错误
+            Toast.fail('登录请求发生错误，请稍后再试。');
         }
-        if (values.yzm === '' || values.yzm === null || values.yzm === undefined) {
-            Toast.fail('请输入验证码');
-            return false;
-        }
-        //调用接口验证身份
+    };
 
-    }
     return (
         <div className="login">
             <header>
-                <ArrowLeft onClick={()=>navigate(-1)}/>
+                <ArrowLeft onClick={() => navigate(-1)} />
             </header>
 
             <Form
@@ -49,15 +52,21 @@ const Login = () => {
                     </div>}
             >
 
-                <span className="title-text">手机号码登录</span>
+                <span className="title-text">登录</span>
 
                 <Form.Item
-                    name='phone'
-                    rules={[{ pattern: /^1[3456789]\d{9}$/, message: '请输入正确的手机号' }]}
+                    className='username'
+                    name='username'
                 >
-                    <Input className='Phone' placeholder="请输入手机号" />
+                    <Input placeholder="请输入用户名" />
+                </Form.Item>
 
-                </Form.Item >
+                <Form.Item
+                    className='password'
+                    name='password'
+                >
+                    <Input placeholder="请输入密码" />
+                </Form.Item>
 
                 <Form.Item
                     name='yzm'
@@ -65,7 +74,7 @@ const Login = () => {
                 >
                     <div className="captcha">
 
-                        <Input className='yzm' placeholder="请输入手机验证码" />
+                        <Input className='yzm' placeholder="请输入邮箱验证码" />
                         <Button block color='rgba(255,255,255,0)' className='getYzm' onClick={handleGetYzm}><span>获取验证码</span></Button>
 
                     </div>
@@ -87,11 +96,11 @@ const Login = () => {
                 <div className="list">
 
                     <div className="wx">
-                        <img src='/public/images/other/WX.png' onClick={()=>Toast('使用微信登录')}/>
+                        <img src='/public/images/other/WX.png' onClick={() => Toast('使用微信登录')} />
                     </div>
 
                     <div className="qq">
-                        <img src='/public/images/other/QQ.png' onClick={()=>Toast('使用QQ登录')}/>
+                        <img src='/public/images/other/QQ.png' onClick={() => Toast('使用QQ登录')} />
                     </div>
                 </div>
             </div>
